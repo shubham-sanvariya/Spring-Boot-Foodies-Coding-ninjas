@@ -38,4 +38,12 @@ public class MainController {
     public void addRestaurant(@RequestBody Restaurant restaurant){
         mainService.addRestaurant(restaurant);
     }
+
+    @PostMapping("/Rating/{customerId}/add/{restaurantName}")
+    public void addRatingForRestaurantByCustomer(@RequestBody Rating rating,
+    @PathVariable Integer customerId,
+     @PathVariable String restaurantName){
+
+        mainService.addRatingForRestaurantByCustomer(rating,customerId,restaurantName);
+     }
 }
