@@ -33,4 +33,9 @@ public class MainController {
     public void addCustomer(@RequestBody Customer customer){
         mainService.addCustomer(customer);
     }
+
+    @PostMapping("/Restaurant/add")
+    public void addRestaurant(@RequestBody Restaurant restaurant){
+        mainService.addRestaurant(restaurant);
+    }
 }
