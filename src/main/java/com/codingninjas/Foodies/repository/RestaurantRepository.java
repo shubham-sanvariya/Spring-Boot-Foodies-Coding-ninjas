@@ -6,4 +6,5 @@ import com.codingninjas.Foodies.entity.Restaurant;
 
 public interface RestaurantRepository extends JpaRepository<Restaurant,Integer>{
     
+    Restaurant findByName(String restaurantName);
 }
