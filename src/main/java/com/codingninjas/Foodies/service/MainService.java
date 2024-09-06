@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.codingninjas.Foodies.entity.Customer;
 import com.codingninjas.Foodies.entity.Rating;
+import com.codingninjas.Foodies.entity.Restaurant;
 import com.codingninjas.Foodies.repository.CustomerRepository;
 import com.codingninjas.Foodies.repository.RatingRepository;
 import com.codingninjas.Foodies.repository.RestaurantRepository;
@@ -26,7 +27,12 @@ public class MainService {
     public List<Rating> getAllRatings(){
         return ratingRepository.findAll();
     }
+
     public List<Customer> getAllCustomers(){
         return customerRepository.findAll();
+    }
+
+    public void addCustomer(Customer customer){
+        customerRepository.save(customer);
     }
 }
