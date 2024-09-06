@@ -35,4 +35,8 @@ public class MainService {
     public void addCustomer(Customer customer){
         customerRepository.save(customer);
     }
+
+    public void addRestaurant(Restaurant restaurant){
+        restaurantRepository.save(restaurant);
+    }
 }
