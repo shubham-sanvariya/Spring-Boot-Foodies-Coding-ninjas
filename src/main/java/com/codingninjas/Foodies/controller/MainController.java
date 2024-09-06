@@ -23,4 +23,9 @@ public class MainController {
     public List<Customer> getAllCustomers(){
         return mainService.getAllCustomers();
     }
+
+    @GetMapping("/ratings")
+    public List<Rating> getAllRatings(){
+        return mainService.getAllRatings();
+    }
 }
