@@ -2,6 +2,8 @@ package com.codingninjas.Foodies.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,6 +25,7 @@ public class Restaurant {
     private List<Rating> ratings;
 
     @ManyToMany(mappedBy = "visitedRestaurants")
+    @JsonIgnore
     private List<Customer> customers;
 
     public Restaurant() {

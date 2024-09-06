@@ -46,4 +46,9 @@ public class MainController {
 
         mainService.addRatingForRestaurantByCustomer(rating,customerId,restaurantName);
      }
+
+     @GetMapping("/customers/restaurant/{restaurantName}")
+     public List<Customer> findAllByVisitedRestaurant(@PathVariable String restaurantName){
+        return mainService.allCustomersVistedRestaurant(restaurantName);
+     }
 }

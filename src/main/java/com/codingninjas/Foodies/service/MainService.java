@@ -59,4 +59,12 @@ public class MainService {
         restaurantRepository.save(restaurant);
         customerRepository.save(customer);
     }
+
+    public List<Customer> allCustomersVistedRestaurant(String restaurantName) {
+        Restaurant rt = restaurantRepository.findByName(restaurantName);
+        // if (rt == null) {
+        //     throw new NoSuchElementException("restaurant not found by name: " + restaurantName);
+        // }
+        return customerRepository.findByVisitedRestaurants(rt);
+    }
 }
