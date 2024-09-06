@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.codingninjas.Foodies.entity.Customer;
 import com.codingninjas.Foodies.entity.Rating;
 import com.codingninjas.Foodies.repository.CustomerRepository;
 import com.codingninjas.Foodies.repository.RatingRepository;
@@ -24,5 +25,8 @@ public class MainService {
 
     public List<Rating> getAllRatings(){
         return ratingRepository.findAll();
+    }
+    public List<Customer> getAllCustomers(){
+        return customerRepository.findAll();
     }
 }
