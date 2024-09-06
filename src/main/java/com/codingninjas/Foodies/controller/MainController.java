@@ -28,4 +28,9 @@ public class MainController {
     public List<Rating> getAllRatings(){
         return mainService.getAllRatings();
     }
+
+    @PostMapping("/Customer/add")
+    public void addCustomer(@RequestBody Customer customer){
+        mainService.addCustomer(customer);
+    }
 }
